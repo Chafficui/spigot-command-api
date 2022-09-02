@@ -62,9 +62,9 @@ public class CommandHandler {
     }
 
     @SneakyThrows
-    public static void registerProcessors(Class<Processor<?>> processorClass, Plugin plugin) {
+    public static void registerProcessors(Processor<?> processorClass, Plugin plugin) {
         CommandHandler.setPlugin(plugin);
-        ParamProcessor.createProcessor(processorClass.newInstance());
+        ParamProcessor.createProcessor(processorClass);
     }
 
     /**
